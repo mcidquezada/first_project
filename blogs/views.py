@@ -15,6 +15,8 @@
 #     return HttpResponse(respuesta)
 
 from django.shortcuts import HttpResponse, redirect # agrega redirección a la declaración de importación
+from django.http  import JsonResponse
+
 def some_method(request):
 	return redirect("/") 
 
@@ -41,3 +43,6 @@ def edit(request, number, edit):
 def destroy(request, number,delete):
     return redirect("/")
 
+def Json(request):
+    respuesta = {"titulo:" "Matias"};
+    return JsonResponse(respuesta)
